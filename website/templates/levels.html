@@ -16,12 +16,14 @@
 				<div class="panel panel-primary">
 					<div class="panel-body">
 						{% for lvl in reward_levels %}
-							<h4>Lvl. {{lvl}}</h4>
-							{% for role in reward_roles[lvl] %}
-								<strong style="color:#{{role.color}}">
-									{{role.name}}
-								</strong><br />
-							{% endfor %}
+							<div style="border:solid; color:#{{reward_roles[lvl][0].color}}">
+								<h4>Lvl. {{lvl}}</h4>
+								{% for role in reward_roles[lvl] %}
+									<strong style="color:#{{role.color}}">
+										{{role.name}}
+									</strong><br/>
+								{% endfor %}
+							</div>
 						{% else %}
 							<center>
 							No rewards to show :'(
