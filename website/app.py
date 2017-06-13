@@ -428,7 +428,7 @@ def get_invite_link(server_id):
     url = "https://discordapp.com/oauth2/authorize?&client_id={}"\
           "&scope=bot&permissions={}&guild_id={}&response_type=code"\
           "&redirect_uri=http://{}/servers".format(OAUTH2_CLIENT_ID,
-                                                   '66321471',
+                                                   '808545304',
                                                    server_id,
                                                    DOMAIN)
     return url
