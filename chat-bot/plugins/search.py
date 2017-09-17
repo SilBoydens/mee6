@@ -68,6 +68,7 @@ class Search(Plugin):
             response = "\n **{e[word]}** ```\n{e[definition]}``` \n "\
                        "**example:** {e[example]} \n"\
                        "<{e[permalink]}>".format(e=entry)
+            response = response.replace('@everyone', '@ everyone').replace('@here', '@ here')
         else:
             response = NOT_FOUND
         await self.mee6.send_message(message.channel, response)
